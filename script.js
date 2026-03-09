@@ -3,7 +3,7 @@
    ============================================= */
 
 // ── WhatsApp number (with country code, digits only) ──
-const WHATSAPP_NUMBER = "2349159259335";
+const WHATSAPP_NUMBER = "2348130142458";
 
 // ─────────────────────────────────────────────
 // NAVBAR: scroll shadow + hamburger toggle

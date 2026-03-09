@@ -205,8 +205,30 @@ ul  { list-style: none; }
   width: 44px;
   height: 1px;
   background: var(--rose-gold);
-  margin: 0 auto;
+  margin: 0 auto 2.2rem;
   opacity: 0.55;
+}
+
+.hero-cta {
+  display: inline-block;
+  padding: 0.88rem 2.2rem;
+  background: var(--rose-gold);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  border-radius: 50px;
+  transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+  box-shadow: 0 6px 24px rgba(201,150,122,0.28);
+}
+
+.hero-cta:hover {
+  background: var(--rose-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 32px rgba(169,120,96,0.32);
+  color: var(--white);
 }
 
 /* Scroll arrow */

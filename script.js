@@ -2,6 +2,16 @@
    NAILS BY SHARON — script.js
    ============================================= */
 
+// ── Reveal logo only after Great Vibes font is loaded (prevents capital-N flash) ──
+if (document.fonts && document.fonts.load) {
+  document.fonts.load('1em "Great Vibes"').then(function () {
+    document.documentElement.classList.add('fonts-loaded');
+  });
+} else {
+  // Fallback for browsers without font loading API
+  document.documentElement.classList.add('fonts-loaded');
+}
+
 // ── WhatsApp number (with country code, digits only) ──
 const WHATSAPP_NUMBER = "2348130142458";
 

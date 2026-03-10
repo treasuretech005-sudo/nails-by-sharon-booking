@@ -385,7 +385,7 @@ ul  { list-style: none; }
 
 .guide-frame-inner {
   width: 100%;
-  max-width: 640px;
+  max-width: 520px;          /* tighter on desktop — was 640px */
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-hover);
@@ -432,7 +432,7 @@ ul  { list-style: none; }
 }
 
 .shape-img-wrap {
-  height: 185px;
+  height: 230px;             /* was 185px — bigger shape previews */
   overflow: hidden;
   background: var(--off-white);
 }
@@ -792,7 +792,12 @@ ul  { list-style: none; }
    RESPONSIVE — MOBILE (max 580px)
    ============================================= */
 @media (max-width: 580px) {
-  .logo-text   { font-size: 1.55rem; }
+  /* Logo: keep script font, just shrink slightly — no fallback capital N */
+  .logo-text {
+    font-size: 1.6rem;
+    letter-spacing: 0.01em;
+  }
+
   .section { padding: 72px 0; }
 
   .hero-title { font-size: clamp(2.8rem, 13vw, 4.5rem); }

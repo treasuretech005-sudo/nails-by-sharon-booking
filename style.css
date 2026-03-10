@@ -80,11 +80,28 @@ ul  { list-style: none; }
   height: 72px;
 }
 
-.nav-logo img {
-  height: 46px;
-  width: auto;
-  object-fit: contain;
-  display: block;
+.nav-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.logo-text {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.1rem;
+  color: var(--rose-gold);
+  line-height: 1;
+  letter-spacing: 0.03em;
+  transition: color var(--transition), text-shadow var(--transition);
+  white-space: nowrap;
+  text-shadow: 0 1px 8px rgba(201,150,122,0.15);
+  user-select: none;
+}
+
+.nav-logo:hover .logo-text {
+  color: var(--rose-dark);
+  text-shadow: 0 2px 12px rgba(169,120,96,0.22);
 }
 
 .nav-links {
@@ -358,19 +375,39 @@ ul  { list-style: none; }
 /* =============================================
    NAIL SHAPES
    ============================================= */
-.guide-wrap {
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  box-shadow: var(--shadow-soft);
-  max-height: 360px;
+/* ── Shared guide frame (shapes + length) ── */
+.guide-frame {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-bottom: 3rem;
 }
 
-.guide-img {
+.guide-frame-inner {
   width: 100%;
-  height: 360px;
+  max-width: 640px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-hover);
+  border: 1px solid var(--border);
+  background: var(--off-white);
+  transition: box-shadow var(--transition);
+}
+
+.guide-frame-inner:hover {
+  box-shadow: 0 20px 60px rgba(180,100,100,0.20);
+}
+
+.guide-frame-inner img {
+  width: 100%;
+  height: auto;
   object-fit: contain;
-  background: #faf4f0;
+  display: block;
+  transition: transform 0.52s ease;
+}
+
+.guide-frame-inner:hover img {
+  transform: scale(1.02);
 }
 
 .shape-grid {
@@ -419,29 +456,15 @@ ul  { list-style: none; }
   border-top: 1px solid var(--border-card);
 }
 
-/* =============================================
-   NAIL LENGTH
-   ============================================= */
-.length-wrap { text-align: center; }
-
-.length-img-wrap {
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  box-shadow: var(--shadow-soft);
-  max-height: 400px;
-  transition: box-shadow var(--transition);
+/* length caption sits below guide-frame */
+.length-caption {
+  margin-top: 1.2rem;
+  font-size: 0.74rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-light);
+  text-align: center;
 }
-
-.length-img-wrap:hover { box-shadow: var(--shadow-hover); }
-
-.length-img-wrap img {
-  height: 400px;
-  object-fit: contain;
-  background: var(--off-white);
-  transition: transform 0.52s ease;
-}
-
-.length-img-wrap:hover img { transform: scale(1.03); }
 
 .length-caption {
   margin-top: 1.2rem;
@@ -716,6 +739,9 @@ ul  { list-style: none; }
    RESPONSIVE — TABLET (max 920px)
    ============================================= */
 @media (max-width: 920px) {
+  /* Logo shrinks slightly on tablet */
+  .logo-text { font-size: 1.7rem; }
+
   /* Mobile nav drawer */
   .nav-links {
     position: fixed;
@@ -766,6 +792,7 @@ ul  { list-style: none; }
    RESPONSIVE — MOBILE (max 580px)
    ============================================= */
 @media (max-width: 580px) {
+  .logo-text   { font-size: 1.55rem; }
   .section { padding: 72px 0; }
 
   .hero-title { font-size: clamp(2.8rem, 13vw, 4.5rem); }

@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Great+Vibes&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
 </head>
 <body>
 
@@ -15,7 +15,7 @@
   <nav class="navbar" id="navbar">
     <div class="nav-container">
       <a href="#home" class="nav-logo">
-        <img src="images/logo.png" alt="Nails by Sharon" />
+        <span class="logo-text">Nails by Sharon</span>
       </a>
       <button class="nav-toggle" id="navToggle" aria-label="Open menu">
         <span></span><span></span><span></span>
@@ -109,8 +109,10 @@
         <span class="section-tag">Guide</span>
         <h2 class="section-title">Choose Your Shape</h2>
       </div>
-      <div class="guide-wrap reveal">
-        <img src="images/shape-guide.jpg" alt="Nail Shape Guide" class="guide-img" />
+      <div class="guide-frame reveal">
+        <div class="guide-frame-inner">
+          <img src="images/shape-guide.jpg" alt="Nail Shape Guide" />
+        </div>
       </div>
       <div class="shape-grid">
 
@@ -155,8 +157,8 @@
         <span class="section-tag">Reference</span>
         <h2 class="section-title">Nail Length Guide</h2>
       </div>
-      <div class="length-wrap reveal">
-        <div class="length-img-wrap">
+      <div class="guide-frame reveal">
+        <div class="guide-frame-inner">
           <img src="images/length-guide.jpg" alt="Nail Length Guide" />
         </div>
         <p class="length-caption">Short &nbsp;&mdash;&nbsp; Medium &nbsp;&mdash;&nbsp; Long &nbsp;&mdash;&nbsp; Extra Long</p>
